@@ -1,18 +1,15 @@
 import React from 'react'
-import Header from '../components/header/Header'
-import Footer from '../components/footer/Footer'
+import Container from '../Container'
 
-const DocumentLayout = ({ 
-    children, 
-}: { 
-    children: React.ReactNode 
-}) => {
+interface DocumentLayoutProps {
+    children: React.ReactNode
+}
+
+const DocumentLayout: React.FC<DocumentLayoutProps> = ({ children }) => {
     return (
-        <>
-            <Header />
-                {children}
-            <Footer />
-        </>
+        <Container>
+            {children}
+        </Container>
     )
 }
 
